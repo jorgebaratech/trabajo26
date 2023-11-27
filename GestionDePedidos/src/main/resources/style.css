@@ -1,0 +1,22 @@
+/*
+Centrar el contenido de las celdas
+*/
+.table-cell:filled {
+    -fx-alignment: CENTER;
+}
+
+/*
+Centrar titulo de la columna y insertar el color
+*/
+.table-view .column-header .label{
+    -fx-text-fill: #ffffff;
+    -fx-alignment: CENTER;
+    -fx-background-color: #ffe500;
+}
+
+/*
+Fila seleccionada cambiar color al estar encima de la fila
+*/
+.table-view:row-selection .table-row-cell:filled:selected:hover {
+    -fx-background-color: #ffe500;
+}

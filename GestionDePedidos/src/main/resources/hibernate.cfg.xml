@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://hibernate.org/hibernate-configuration-3.0.dtd">
+
+
+<hibernate-configuration>
+
+    <!-- a SessionFactory instance listed as /jndi/name -->
+    <session-factory>
+        <!-- properties -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/gestiondenutrias</property>
+        <property name="hibernate.connection.password"></property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="show_sql">true</property>
+        <property name="hibernate.transaction.jta.platform">org.hibernate.engine.transaction.jta.platform.internal.AtomikosJtaPlatform</property>
+        <mapping class="com.example.gestiondepedidos.domain.usuario.Usuario"/>
+        <mapping class="com.example.gestiondepedidos.domain.pedido.Pedido"/>
+        <mapping class="com.example.gestiondepedidos.domain.item.Item"/>
+        <mapping class="com.example.gestiondepedidos.domain.producto.Producto"/>
+    </session-factory>
+</hibernate-configuration>
